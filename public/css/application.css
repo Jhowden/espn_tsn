@@ -1,0 +1,43 @@
+
+html { 
+  background: url(http://cdn.nhl.com/blackhawks/images/upload/2009/10/hullworsley700.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+/*  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;*/
+}
+
+.hockey_intro {
+/*  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;*/
+  width: 15%;
+  background-image: url('http://2048x.org/wp-content/miniwallpaper/20121206/wwmxym1ckwp38.jpg');
+  opacity:0.8;
+}
+.signup {
+  position:absolute;
+  right:0;
+  top: 0;
+}
+
+table {
+  border: 1px solid black;
+}
+
+table td{
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+/*td {
+  margin: 100px;
+}
+*/
