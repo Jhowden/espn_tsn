@@ -7,7 +7,7 @@ end
 post '/signup' do
   user = User.create(params[:user])
   fav_team = Team.find_by_name(params[:favorite_team])
-  user.team << fav_team
+  fav_team.users << user
   session[:user_id] = user.id
   redirect to "/"
 end
