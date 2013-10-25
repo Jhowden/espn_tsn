@@ -15,13 +15,46 @@ html {
 }
 
 .hockey_intro {
-/*  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;*/
-  width: 210px;
-  background-image: url('http://2048x.org/wp-content/miniwallpaper/20121206/wwmxym1ckwp38.jpg');
-  opacity:0.8;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 256px;
+  /*background-image: url('http://2048x.org/wp-content/miniwallpaper/20121206/wwmxym1ckwp38.jpg');*/
+  background-color: white;
+  opacity:0.85;
 }
+
+nav {
+  border: 1px solid black;
+}
+
+#nav_title {
+  text-align: center;
+}
+
+.nhl_headlines {
+  width:50%;
+  position:absolute;
+  right:30%;
+  top:18%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  opacity:0.85;
+}
+
+.nhl_headlines ul {
+  list-style-type: none;
+}
+
+.nhl_headline {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.nhl_description {
+  margin-bottom: 10px;
+}
+
 .signup {
   position:absolute;
   right:0;
@@ -37,7 +70,12 @@ table td{
   margin-right: 10px;
 }
 
-/*td {
-  margin: 100px;
+.nhl_scores {
+  width: 20%;
+  position: absolute;
+  top: 18%;
+  right: 0;
+  background-color: white;
+  opacity:0.85;
+  border: 2px solid blue;
 }
-*/

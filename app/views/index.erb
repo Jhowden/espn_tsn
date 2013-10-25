@@ -1,25 +1,30 @@
-<h1>Hockey</h1>
+
+<div class="homepage_title">
+  <h1>Standings</h1>
+</div>
 <div class="hockey_intro">
 
   <table>
-    <tr> <th>Team</th><th>Logo</th><th>Record</th></tr>
-      <% @nhl.each do |team| %>
+    <tr> <th>Team</th><th>Logo</th><th>Record</th><th>Points</th></tr>
+    <% @nhl.each do |team| %>
     <tr>
       <td class="nhl_table"><%= team.location %> <%= team.name %></td>
       <td> <img src=<%= team.logos[:small][:href] %>></td>
       <td><%= team.record[:summary] %></td>
+      <td><%= (team.record.wins * 2) + (team.record.overtimeLosses * 1) %></td>
     </tr>
     <% end %>
   </table>
 </div>
 
 <div class="signup">
+  <% if !current_user %> 
   <h5> Register here to get customized news of your favorite team</h5>
   <form class="signup_form" action="/signup" method="post">
     <label for="username">Username</label>
     <input type="text" name="user[username]"><br>
     <label for="password">Password</label>
-    <input type="text" name="user[password]"><br>
+    <input type="password" name="user[password]"><br>
     <label for="favorite_team">Favorite Team</label>
     <select name="favorite_team">
       <option value="Anaheim Ducks">Anaheim Ducks</option>
@@ -55,4 +60,25 @@
     </select>
     <input type="submit" value="Register">
   </form>
+  <% end %>
 </div>
+
+<div class="nhl_headlines">
+  <ul>
+    <% @headlines.each do |headline| %>
+    <li class="nhl_headline"><%= headline.headline %></li>
+    <li class="nhl_description"><%= headline.description %></li>
+    <% end %>
+  </ul>
+</div>
+
+<% if current_user %>
+<div class="nhl_scores">
+
+  <% if todays_games %>
+  <h2> YOUR TEAM IS PLAYING TODAY :) </h2>
+  <% else %>
+  <h2>YOUR TEAM DOES NOT PLAY TODAY :( </h2>
+  <% end %>
+</div>
+<% end %>
